@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html ng-app="ImageScrapper">
+
+<head>
+
+    <!-- <base href="/stat/"> -->
+    <meta charset="utf-8">
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./ui/dist/semantic.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="./stye.css">
+    <script src="./ui/dist/semantic.min.js"></script>
+    <title></title>
+</head>
+
+<body>
+    <loader-component></loader-component>
+    <div class="" ui-view="header"></div>
+    <div class="body">
+        <div class="" ui-view="body">
+    </div>
+
+
+    </div>
+
+    <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="./module.js">
+    </script>
+    <script type="text/javascript" src="./indexRoute.js">
+    </script>
+    <script type="text/javascript" src="./component/header-component/header_component.js">
+    </script>
+    <script type="text/javascript" src="./component/loader-component/loader-component_controller.js">
+    </script>
+    <script type="text/javascript" src="./component/loader-component/loader-component_service.js">
+    </script>
+    <script type="text/javascript" src="./component/scrape-input-component/scrape-input-component.js">
+    </script>
+    <script type="text/javascript" src="./component/image-listing-component/image-listing-component.js">
+    </script>
+
+
+</body>
+
+</html>

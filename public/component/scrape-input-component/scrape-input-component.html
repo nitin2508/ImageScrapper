@@ -1,0 +1,17 @@
+
+<div class="ui fluid action input">
+        <input ng-keyup="$event.keyCode == 13 ? $ctrl.scrapeImage(keyword) : null" type="text" ng-model="keyword" placeholder="Search...">
+        <div type="submit" ng-click="$ctrl.scrapeImage(keyword)" class="ui button">Submit</div>
+</div>
+
+<h3>List of available image of keyword</h3>
+<div style="margin-top:20px;" class="ui grid">
+  <div ng-repeat="keyword in $ctrl.arrayOfKeyword track by $index" class="four wide column header"><a ui-sref="listing({keyword:keyword})" target="_blank">{{keyword}}</a></div>
+</div>
+
+<div ng-if="$ctrl.error" style="display:block" class="ui error message">
+  <!-- <i class="close icon"></i> -->
+  <div class="header">
+    This Word is already in list.
+  </div>
+</div>
