@@ -9,12 +9,12 @@ var app = express();
 app.use(express.static(__dirname + '/images'));
 // express.static(__dirname + "/images");
 app.use("/public", express.static(__dirname + "/images"));
-app.use("/public2", express.static(__dirname + "/public2"));
+app.use("/public2", express.static(__dirname + "/public"));
 app.use(bodyParser.json()); // for parsing application/json)
 app.use('/scrape',scrapeRouter);
 app.use('/keyword',keywordRouter);
 mongoose.connect(db.url);
-var port =3006;
+var port =3009;
 
 
 app.listen(port,function(){

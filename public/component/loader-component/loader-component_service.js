@@ -5,7 +5,7 @@
     LoaderService.$inject = ['$rootScope','$http'];
 
     function LoaderService($rootScope,$http){
-        var baseUrl = 'http://localhost:3006/';
+        var baseUrl = 'http://localhost:3006';
         this.showLoader = function(){
             $rootScope.$emit('SHOW_LOADER');
         };
@@ -14,19 +14,19 @@
         };
 
         this.getAllKeyword = function(){
-            return $http.get(baseUrl+'keyword')
+            return $http.get('/keyword')
                 .then(function(response) {
                     return response.data;
                 });
         }
         this.scrapeImage = function(obj){
-            return $http.post(baseUrl+'scrape',obj)
+            return $http.post(baseUrl+'/scrape',obj)
                 .then(function(response) {
                     return response.data;
                 });
         }
         this.getAllImages = function(keyword){
-            return $http.get(baseUrl+'scrape/'+keyword)
+            return $http.get(baseUrl+'/scrape/'+keyword)
                 .then(function(response) {
                     return response.data;
                 });
