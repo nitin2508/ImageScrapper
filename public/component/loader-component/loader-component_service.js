@@ -20,13 +20,13 @@
                 });
         }
         this.scrapeImage = function(obj){
-            return $http.post(baseUrl+'/scrape',obj)
+            return $http.post('/scrape',obj)
                 .then(function(response) {
                     return response.data;
                 });
         }
         this.getAllImages = function(keyword){
-            return $http.get(baseUrl+'/scrape/'+keyword)
+            return $http.get('/scrape/'+keyword)
                 .then(function(response) {
                     return response.data;
                 });

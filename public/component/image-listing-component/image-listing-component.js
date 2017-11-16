@@ -14,6 +14,7 @@
     function activate() {
 
       vm.keyword = $state.params.keyword;
+      console.log($state);
       vm.imagesArray = [];
       if (vm.keyword) {
         LoaderService.showLoader();
@@ -22,7 +23,7 @@
             var imageUrls = res[0].imageUrls;
             for (var i = 0; i < imageUrls.length; i++) {
               if (imageUrls[i]) {
-                var string = 'http://localhost:3006/' + vm.keyword + '/' + imageUrls[i];
+                var string = window.location.origin+'/' + vm.keyword + '/' + imageUrls[i];
                 vm.imagesArray.push(string)
               }
             }
