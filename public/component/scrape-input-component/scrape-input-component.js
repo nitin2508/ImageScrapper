@@ -34,7 +34,7 @@
         if (vm.arrayOfKeyword[i] === keyword) {
           vm.error = true;
           avtivateTimeout();
-          //return;
+          return;
         }
       }
       var obj = {

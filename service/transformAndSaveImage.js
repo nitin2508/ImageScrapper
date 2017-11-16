@@ -6,13 +6,16 @@ function transformAndSaveImage(imageArray,keyword){
         return Jimp.read(imageObj.url)
         .then((image)=>{
             if(image){
-                console.log("nitin",image);
+             console.log("nitin",image);
              image.greyscale();
              var file = `${keyword}${index}.${image.getExtension()}`;
              image.write('images/'+keyword+'/'+file);
              return file;
          }
-        })
+     }).catch(function(err){
+         console.log(err);
+         return null;
+     })
     }
  var promises = imageArray.map((imageObj,index) =>getFileName(imageObj,index));
  return  Promise.all(promises);
