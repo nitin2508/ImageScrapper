@@ -1,8 +1,9 @@
 var Jimp = require("jimp");
 
 function transformAndSaveImage(imageArray,keyword){
-
+console.log('In transform image');
     function getFileName(imageObj,index){
+        console.log('In get file name');
         return Jimp.read(imageObj.url)
         .then((image)=>{
             if(image){
