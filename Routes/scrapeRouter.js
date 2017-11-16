@@ -8,6 +8,7 @@ var numberOfFile = 15;
 
 scrapeRouter.post('/',function(req,res){
     if(req.body.keyword){
+        console.log('Keyword')
         GetImageUrlByWord(req.body.keyword,15)
         .then(function(imageObj){
             transformAndSaveImage(imageObj,req.body.keyword)
